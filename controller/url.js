@@ -1,7 +1,7 @@
-var shortid = require("shortid");
+var shortid  = require("shortid");
 var validUrl = require('valid-url');
 var mongoose = require("mongoose");
-var mongodb = process.env.MONGOLAB_URI || 'mongodb://' + process.env.IP + ':27017/url-shorten'; // replace
+var mongodb  = process.env.MONGOLAB_URI || 'mongodb://' + process.env.IP + ':27017/url-shorten';
 
 mongoose.connect(mongodb);
 
@@ -31,10 +31,10 @@ module.exports = {
             shortenUrlObj.save(function(error) {
                 if(error) { // error
                     console.error('error: ' + error);
-                } // else 
+                }
                 res.json({ 
                     original_url: originalurl, 
-                    short_url: 'https://my-freecodecamp-project-leronair.c9users.io' +  '/' + shortenurl // replace
+                    short_url: 'https://vinnlee-url-shorten.herokuapp.com' +  '/' + shortenurl
                 });
             });
         } else {
@@ -46,12 +46,12 @@ module.exports = {
     },
     //get the url from database
     getUrl: function(req, res) {
-        listUrl.find({ shortenurl: req.params.id }, function(error, id) {
+        listUrl.find({ shortenurl: req.params.id }, function(error, url) {
             if(error) { // error
                 console.error('error: ' + error);
             } else {
-                if (id && id.length) {
-                    res.redirect(id[0].originalurl);
+                if (url && url.length) {
+                    res.redirect(url[0].originalurl);
                 } else {
                     res.status(404).send("This URL is not in database.");
                 }
