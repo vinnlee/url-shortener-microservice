@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Url Shortener Microservice
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  body
+    .container
+      h1.text-center Url Shortener Microservice
+      p User stories:
+      ol
+        li
+          | I can pass a URL as a parameter and I will receive a shortened URL in the JSON response
+        li
+          | If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+        li When I visit that shortened URL, it will redirect me to my original link.
+      .well
+        p Example:
+        ul
+          li
+            code LINK
+        p will redirect to
+        ul
+          li
+            code LINK
