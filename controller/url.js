@@ -34,7 +34,7 @@ module.exports = {
                 }
                 res.json({ 
                     original_url: originalurl, 
-                    short_url: 'https://vinnlee-url-shorten.herokuapp.com' +  '/' + shortenurl
+                    short_url: 'https://vinnlee-url-shorten.herokuapp.com/' + shortenurl
                 });
             });
         } else {
