@@ -1,6 +1,6 @@
 {
   "name": "url-shortener-microservice",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "shorten the url",
   "main": "server.js",
   "scripts": {
@@ -9,10 +9,10 @@
   "author": "Vincent Lee",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.1",
-    "mongoose": "^4.8.2",
-    "pug": "^2.0.0-beta11",
-    "shortid": "^2.2.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.5",
+    "pug": "^2.0.4",
+    "shortid": "^2.2.15",
     "valid-url": "^1.0.9"
   }
 }
