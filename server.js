@@ -1,6 +1,6 @@
-var express = require("express");
-var app = express();
-var routes = require("./routes/index");
+const express = require("express");
+const app = express();
+const routes = require("./routes/index");
 
 app.set('port', process.env.PORT || 3300);
 app.set('view engine', 'pug');
